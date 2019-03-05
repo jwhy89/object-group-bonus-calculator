@@ -43,6 +43,7 @@ const employees = [
 console.log( employees );
 
 function bonusCalc( array ) {
+  let newEmployeeSalaryArray = []
   for ( let employee of array ) {
     // Calculate Name
     let name = employee.name;
@@ -98,9 +99,11 @@ function bonusCalc( array ) {
       bonusPercentage: bonusPercentage,
       totalCompensation: totalCompensation,
       totalBonus: totalBonus
-   }
-  
-    // Return new object
-    return newEmployeeSalary;
+    }
+    console.log(newEmployeeSalary);
+    newEmployeeSalaryArray.push(newEmployeeSalary);
   } // for of loop
+  
+  // Return array of new objects
+  return newEmployeeSalaryArray;
 } // end function bonusCalc
