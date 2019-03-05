@@ -81,6 +81,11 @@ function bonusCalc( employee ) {
   }
 
   // No bonus can be above 13 % or below 0 % total.
+  if (bonusPercentage > .13) {
+    bonusPercentage =  .13;
+  } else if (bonusPercentage < 0) {
+    bonusPercentage = 0;
+  }
 
   // Calculate totalBonus
   let totalBonus = employee.annualSalary * bonusPercentage;
@@ -88,6 +93,14 @@ function bonusCalc( employee ) {
   // Calculate totalCompensation
   let totalCompensation = employee.annualSalary + totalBonus;
 
+  let newEmployeeSalary = {
+    name: name,
+    bonusPercentage: bonusPercentage,
+    totalCompensation: totalCompensation,
+    totalBonus: totalBonus
+  }
+  
   // Return new object
+  return newEmployeeSalary;
 
 } // end function bonusCalc
