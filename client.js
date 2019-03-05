@@ -56,14 +56,29 @@ function bonusCalc( employee ) {
   }
 
   // Those who have a rating of a 3 should receive a base bonus of 4 % of their base annual income.
+  else if (employee.reviewRating = 3) {
+    bonusPercentage = 0.04;
+  }
 
   // Those who have a rating of a 4 should receive a base bonus of 6 % of their base annual income.
+  else if (employee.reviewRating = 4) {
+    bonusPercentage = 0.06;
+  }
 
   // Those who have a rating of a 5 should receive a base bonus of 10 % of their base annual income.
+  else if (employee.reviewRating = 5) {
+    bonusPercentage = 0.10;
+  }
 
   // If their employee number is 4 digits long, this means they have been with the company for longer than 15 years, and should receive an additional 5 %.
+  if (employee.employeeNumber.toString().length = 4) {
+    bonusPercentage += 0.05;
+  }
 
   // However, if their annual income is greater than $65, 000, they should have their bonus adjusted down 1 %.
+  if (employee.annualSalary > 65000) {
+    bonusPercentage -= 0.01;
+  }
 
   // No bonus can be above 13 % or below 0 % total.
 
