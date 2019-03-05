@@ -89,7 +89,7 @@ function bonusCalc( array ) {
     }
 
     // Calculate totalBonus
-    let totalBonus = employee.annualSalary * bonusPercentage;
+    let totalBonus = Math.round(employee.annualSalary * bonusPercentage);
 
     // Calculate totalCompensation
     let totalCompensation = Number(employee.annualSalary) + Number(totalBonus);
@@ -103,7 +103,7 @@ function bonusCalc( array ) {
     console.log(newEmployeeSalary);
     newEmployeeSalaryArray.push(newEmployeeSalary);
   } // for of loop
-  
+
   // Return array of new objects
   return newEmployeeSalaryArray;
 } // end function bonusCalc
