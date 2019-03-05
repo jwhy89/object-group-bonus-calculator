@@ -48,10 +48,14 @@ function bonusCalc( employee ) {
   let name = employee.name;
 
   // Calculate bonusPercentage
+  let bonusPercentage = 0;
   
-  // Calculate totalCompensation
 
   // Calculate totalBonus
+  let totalBonus = employee.annualSalary * bonusPercentage;
+
+  // Calculate totalCompensation
+  let totalCompensation = employee.annualSalary + totalBonus;
 
   // Return new object
 
