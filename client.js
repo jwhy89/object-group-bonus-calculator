@@ -107,3 +107,5 @@ function bonusCalc( array ) {
   // Return array of new objects
   return newEmployeeSalaryArray;
 } // end function bonusCalc
+
+// create new property is pretty easy
